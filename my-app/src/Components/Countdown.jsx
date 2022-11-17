@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Countdown = (props) => (
-	<h1>
+
 		<div className="countdown">
 			<strong>{props.name}</strong> - {props.time}
 		</div>
-	</h1>
 );
+
+Countdown.propTypes = {
+  name: PropTypes.string,
+  time: PropTypes.string
+}
 
 export default Countdown;
