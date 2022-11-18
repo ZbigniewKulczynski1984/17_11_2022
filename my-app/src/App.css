@@ -3,11 +3,20 @@
   background-color: royalblue;
   max-width: 500px;
   margin: 20px auto;
+  border: 2px solid black;
 }
 
 .countdown {
-  text-align: center;
+  /* text-align: center; */
   font-size: 1.8rem;
   margin: 7px 0;
   padding: 10px;
+}
+
+input {
+  margin: 10px 0;
+} 
+
+label {
+  margin: 10px 10px;
 }

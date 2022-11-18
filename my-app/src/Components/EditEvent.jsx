@@ -3,7 +3,10 @@ import React from 'react';
 const EditEvent = () => {
 	return (
 		<div className="edit-event">
-			<input type="text" />
+			<div className="edit-event__input-group">
+				<label htmlFor="name">name</label>
+				<input type="text" id="name" name="name" />
+			</div>
 		</div>
 	);
 };
