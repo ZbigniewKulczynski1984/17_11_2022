@@ -12,7 +12,13 @@ class App extends Component {
 				{ id: 1, name: 'lunch', time: '15:00' },
 				{ id: 2, name: 'dinner', time: '19:00' },
 			],
+			editedEvents:""
 		};
+		this.handleEditEvent = this.handleEditEvent.bind(this);
+	}
+
+	handleEditEvent(val) {
+		this.setState({editedEvents: val});
 	}
 
 	render() {
@@ -22,7 +28,7 @@ class App extends Component {
 		return (
 			<div className="app">
 				{events}
-				<EditEvent onSave={() => alert("A")}/>
+				<EditEvent onInputChange={val => this.handleEditEvent(val)} onSave={() => alert('A')} />
 			</div>
 		);
 	}
