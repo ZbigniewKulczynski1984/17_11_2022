@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 const Countdown = (props) => (
 
 		<div className="countdown">
-			<strong>{props.name}</strong> - {props.time}
+			<strong>{props.name}</strong> - {props.hour}:{props.minute}
 		</div>
 );
 
 Countdown.propTypes = {
   name: PropTypes.string,
-  time: PropTypes.string
+  hour: PropTypes.string,
+  minute: PropTypes.string
 }
 
 export default Countdown;
