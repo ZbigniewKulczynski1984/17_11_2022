@@ -33,7 +33,13 @@ class App extends Component {
 
 	handleSaveEvent() {
 		this.setState(prevState => ({
-			events: [...prevState.events, prevState.editedEvents]
+			events: [...prevState.events, prevState.editedEvents],
+			editedEvents:{
+				id: 3,
+				name: "",
+				hour: "",
+				minute: ""
+			}
 		}));
 	}
 
@@ -48,7 +54,11 @@ class App extends Component {
 		return (
 			<div className="app">
 				{events}
-				<EditEvent onInputChange={val => this.handleEditEvent(val)} onSave={() => this.handleSaveEvent()} />
+				<EditEvent
+				name={this.state.editedEvents.name}
+				hour={this.state.editedEvents.hour}
+				minute={this.state.editedEvents.minute}
+				onInputChange={val => this.handleEditEvent(val)} onSave={() => this.handleSaveEvent()} />
 			</div>
 		);
 	}
