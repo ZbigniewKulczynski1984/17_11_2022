@@ -1,0 +1,17 @@
+.countdown {
+	/* text-align: center; */
+	font-size: 1.8rem;
+	margin: 7px 0;
+	padding: 10px;
+}
+
+.countdown__icons {
+    cursor: pointer;
+    display: none;
+    float: right;
+    font-size: 1.2rem;
+}
+
+.countdown:hover .countdown__icons {
+    display: block;
+}
