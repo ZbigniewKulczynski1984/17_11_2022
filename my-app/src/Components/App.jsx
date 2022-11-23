@@ -53,6 +53,7 @@ class App extends Component {
 		const events = this.state.events.map((el) => {
 			return <Countdown 
 			key={el.id} 
+			id={el.id}
 			name={el.name} 
 			hour={el.hour} 
 			minute={el.minute} 
